@@ -1,0 +1,8 @@
+/*
+!.gitignore
+!init.lua
+!lua/
+!lua/**
+!spell
+!spell/**
+**/.DS_Store
