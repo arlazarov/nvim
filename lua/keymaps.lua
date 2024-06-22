@@ -16,8 +16,8 @@ map("n", "j", 'v:count == 0 ? "gj" : "j"', { expr = true })
 map("n", "<C-n>", "<cmd>cnext<CR>", opts)
 map("n", "<C-p>", "<cmd>cprev<CR>", opts)
 -- avoid vim register for some operations
-map("n", "x", [["_x]], opts)
-map("x", "p", [["_dP]], opts)
+-- map("n", "x", [["_x]], opts)
+-- map("x", "p", [["_dP]], opts)
 map("n", "<leader>Y", [["+Y]], opts) -- copy current line to system clipboard
 map("n", "<leader>vp", "`[v`]", opts) -- reselect pasted text
 map({ "n", "x" }, "<leader>y", [["+y]], opts) -- copy to system clipboard
