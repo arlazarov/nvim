@@ -8,6 +8,9 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/neodev.nvim", opts = {} },
 	},
+	pots = {
+		inlay_hints = { enabled = true },
+	},
 	config = function()
 		require("plugins.lsp.config.handlers").setup()
 		local lspconfig = require("lspconfig")

@@ -19,5 +19,8 @@ return {
 		vim.g.vimwiki_camel_case = 0
 		vim.g.vimwiki_table_auto_fmt = 1
 		vim.g.vimwiki_use_calendar = 1
+
+		-- Key mapping for toggling list items
+		vim.api.nvim_set_keymap("n", "<Leader>tt", ":VimwikiToggleListItem<CR>", { noremap = true, silent = true })
 	end,
 }

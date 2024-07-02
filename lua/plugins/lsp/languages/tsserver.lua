@@ -4,7 +4,16 @@ return {
 	default_config = {
 		init_options = {
 			hostInfo = "neovim",
-			preferences = { disableSuggestions = true },
+			preferences = {
+				disableSuggestions = true,
+				includeInlayParameterNameHints = "all",
+				includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+				includeInlayFunctionParameterTypeHints = true,
+				includeInlayVariableTypeHints = true,
+				includeInlayPropertyDeclarationTypeHints = true,
+				includeInlayFunctionLikeReturnTypeHints = true,
+				includeInlayEnumMemberValueHints = true,
+			},
 		},
 		cmd = { "typescript-language-server", "--stdio" },
 		filetypes = {

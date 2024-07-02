@@ -6,15 +6,49 @@ return {
 		"folke/which-key.nvim",
 	},
 	config = function()
-		require("which-key").register({
+		local trouble = require("trouble")
+		local wk = require("which-key")
+
+		-- Register key mappings
+		wk.register({
 			x = {
 				name = "Trouble",
-				x = { "<cmd>TroubleToggle<cr>", "Trouble: toggle" },
-				w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Trouble: workspace diagnostics" },
-				d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Trouble: document diagnostics" },
-				q = { "<cmd>TroubleToggle quickfix<cr>", "Trouble: quickfix list" },
-				l = { "<cmd>TroubleToggle loclist<cr>", "Trouble: location list" },
-				t = { "<cmd>TodoTrouble<cr>", "Trouble: open todos" },
+				x = {
+					function()
+						trouble.toggle()
+					end,
+					"Trouble: toggle",
+				},
+				w = {
+					function()
+						trouble.toggle("workspace_diagnostics")
+					end,
+					"Trouble: workspace diagnostics",
+				},
+				d = {
+					function()
+						trouble.toggle("document_diagnostics")
+					end,
+					"Trouble: document diagnostics",
+				},
+				q = {
+					function()
+						trouble.toggle("quickfix")
+					end,
+					"Trouble: quickfix list",
+				},
+				l = {
+					function()
+						trouble.toggle("loclist")
+					end,
+					"Trouble: location list",
+				},
+				t = {
+					function()
+						trouble.open("todo")
+					end,
+					"Trouble: open todos",
+				},
 			},
 		}, { prefix = "<leader>" })
 	end,

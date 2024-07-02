@@ -17,7 +17,7 @@ return {
 			"if_statement",
 		},
 	},
-	require("which-key").register({
-		tt = { "<cmd>Twilight<cr>", "Twilight" },
-	}, { prefix = "<leader>" }),
+	-- require("which-key").register({
+	-- 	tt = { "<cmd>Twilight<cr>", "Twilight" },
+	-- }, { prefix = "<leader>" }),
 }

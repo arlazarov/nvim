@@ -24,3 +24,7 @@ vim.api.nvim_set_hl(0, "DiagnosticInfo", { bg = "none", fg = "green" })
 vim.api.nvim_set_hl(0, "DiagnosticSignInfo", { link = "DiagnosticInfo" })
 vim.api.nvim_set_hl(0, "DiagnosticWarn", { bg = "none", fg = "yellow" })
 vim.api.nvim_set_hl(0, "DiagnosticSignWarn", { link = "DiagnosticWarn" })
+
+vim.api.nvim_set_hl(0, "VimwikiHeader1", { fg = "#FF0000", bold = true })
+vim.api.nvim_set_hl(0, "VimwikiHeader2", { fg = "#00FF00", bold = true })
+vim.api.nvim_set_hl(0, "VimwikiHeader3", { fg = "#0000FF", bold = true })

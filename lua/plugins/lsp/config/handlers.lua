@@ -73,6 +73,9 @@ local keymaps = require("plugins.lsp.config.keymaps")
 
 M.on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+	if client.server_capabilities.inlayHintProvider then
+		vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+	end
 	if client.name == "tsserver" then
 		client.server_capabilities.document_formatting = false
 	end

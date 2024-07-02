@@ -16,6 +16,12 @@ function M.map(bufnr)
 		["+"] = { "<cmd>Telescope luasnip<cr>", "Code: snippets" },
 		["l"] = {
 			name = "LSP",
+			h = {
+				function()
+					vim.lsp.inlay_hint.enable(true)
+				end,
+				"inlay hints",
+			},
 			a = { "<cmd>:Lspsaga code_action<cr>", "code action" },
 			r = { vim.lsp.buf.rename, "rename" },
 			R = { "<cmd>LspRestart<cr>", "restart server" },

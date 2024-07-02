@@ -29,6 +29,7 @@ return {
 				"lua_ls",
 				"emmet_ls",
 				"pyright",
+				"node2",
 			},
 		})
 
